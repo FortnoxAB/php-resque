@@ -14,15 +14,8 @@ class Resque_Log extends Psr\Log\AbstractLogger
 		$this->verbose = $verbose;
 	}
 
-	/**
-	 * Logs with an arbitrary level.
-	 *
-	 * @param mixed   $level    PSR-3 log level constant, or equivalent string
-	 * @param string  $message  Message to log, may contain a { placeholder }
-	 * @param array   $context  Variables to replace { placeholder }
-	 * @return null
-	 */
-	public function log($level, $message, array $context = array()): void {
+    // public function log($level, string|\Stringable $message, array $context = []): void{
+    public function log($level, $message, array $context = []): void{
 		if ($this->verbose) {
 			fwrite(
 				STDOUT,
