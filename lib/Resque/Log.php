@@ -14,8 +14,7 @@ class Resque_Log extends Psr\Log\AbstractLogger
 		$this->verbose = $verbose;
 	}
 
-    // public function log($level, string|\Stringable $message, array $context = []): void{
-    public function log($level, $message, array $context = []): void{
+    public function log($level, string|\Stringable $message, array $context = []): void{
 		if ($this->verbose) {
 			fwrite(
 				STDOUT,
