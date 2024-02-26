@@ -1,6 +1,6 @@
 parameters:
 	level: 1
-	phpVersion: 80200
+	phpVersion: 80300
 	parallel:
 		maximumNumberOfProcesses: 6
 	cache:
